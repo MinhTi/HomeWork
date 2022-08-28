@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_01_Textblock"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="500">
+        Loaded="Window_Loaded"
+        Title="First project with WPF" Height="200" Width="500">
     <Grid>
         <StackPanel >
             <Grid>
@@ -47,6 +48,8 @@
             </Grid>
             <Grid Height="30" >
                 <TextBlock 
+                    x:Name="txtbl1"
+                    chang
                     TextWrapping="WrapWithOverflow"
                     Text="How much is course ?"
                     MouseEnter="TextBlock_MouseEnter"
@@ -58,10 +61,18 @@
 
             <TextBlock Height="30">
                     <Hyperlink 
-                        NavigateUri="httt://www.google.com"
-                        Foreground="black">
-                            click hear !!!
+                        RequestNavigate="TextBlock_RequestNavigate"
+                        NavigateUri="http://www.howkteam.com"
+                        Foreground="black"
+                        FontSize="20">
+                            How Kteam !!!
                     </Hyperlink>
+            </TextBlock>
+            <TextBlock x:Name="txtbl2"
+                  VerticalAlignment="Bottom"
+                  FontSize="20"
+                  >
+                  abc  
             </TextBlock>
         </StackPanel>
     </Grid>

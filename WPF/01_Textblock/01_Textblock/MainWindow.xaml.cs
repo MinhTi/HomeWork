@@ -25,6 +25,7 @@ namespace _01_Textblock
         public MainWindow()
         {
             InitializeComponent();
+            this.Loaded += Window_Loaded;
         }
 
         private void TextBlock_MouseEnter(object sender, MouseEventArgs e)
@@ -35,13 +36,26 @@ namespace _01_Textblock
         private void TextBlock_MouseEnter_link(object sender, MouseEventArgs e)
         {
             TextBlock txtbl = sender as TextBlock;
-            txtbl.Text = "www.HowKteam.com";
+            txtbl1.Text = "www.HowKteam.com";
         }
 
         private void TextBlock_RequestNavigate(object sender, RequestNavigateEventArgs e)
         {
-            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
-            e.Handled = true;
+            //System.Diagnostics.Process.Start("cmd","/c start http://www.google.com");
+            Process.Start("cmd", "/c start http://www.howkteam.com");
+            //Process.Start(new ProcessStartInfo(e.Uri.ToString()));
+            //e.Handled = true;
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            txtbl2.Text = txtbl1.Text;
+        }
+
+        private void txtbl1_DataContextChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            txtbl2.Text = txtbl1.Text;
+            this.Loaded += Window_Loaded;
         }
     }
 }
