@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <RootNamespace>_02_Button</RootNamespace>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Ngoại hình_Nhân_Nữ00004.jpg" />
+    <None Remove="Ngoại hình_Nhân_Nữ00005.jpg" />
+    <None Remove="pexels-james-wheeler-1519088.jpg" />
+    <None Remove="pokemon-ecchi-misty-pokemon-1920x1200-wallpaper-Anime-.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ngoại hình_Nhân_Nữ00004.jpg" />
+    <Resource Include="Ngoại hình_Nhân_Nữ00005.jpg" />
+    <Resource Include="pexels-james-wheeler-1519088.jpg" />
+    <Resource Include="pokemon-ecchi-misty-pokemon-1920x1200-wallpaper-Anime-.jpg" />
+  </ItemGroup>
+
+</Project>
